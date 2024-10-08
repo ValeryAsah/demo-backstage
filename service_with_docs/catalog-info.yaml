@@ -2,6 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: service-with-docs
+  namespace: external-systems
   description: The place to be, for great artists
   annotations:
     backstage.io/techdocs-ref: dir:.
@@ -9,3 +10,7 @@ spec:
   type: service
   lifecycle: production
   owner: artist-relations-team
+  providesApis:
+    - petstore
+    - internal/streetlights
+    - hello-world
